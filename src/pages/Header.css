@@ -1,0 +1,147 @@
+ .bg-blackk{
+    background-color: #141313;
+    border-bottom: 0.1px solid white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+}
+
+  .color1{
+    color: rgba(43, 248, 248, 0.795);
+    font-family: 'Roboto', sans-serif;    /* font-size: 1rem; */
+    font-size: 1.5rem;
+    padding-top:  10px;
+    /* height: 50px; */
+  }
+  .name{
+    width: 100px;
+    cursor: pointer;
+  }
+ 
+.icons{
+    color: rgba(43, 248, 248, 0.795);
+    background: none;
+    font-size: 25px;
+    z-index: 99;
+    flex-direction: start;
+    margin-left: 0.5rem;
+}
+
+ .iconbtn{
+  background:none;
+  color: #141313;
+  border: none;
+} 
+
+.btn-groups{
+  color: rgba(43, 248, 248, 0.61);
+  background: none;
+  border: none;
+}
+.btn-style :hover{
+  cursor: pointer;
+  color: rgba(43, 248, 248, 0.979);
+}
+.btn-style{
+  padding: 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -340px;
+  width: 320px;
+  height: 100%;
+  background-color: #080808ef;
+  /* color: rgba(43, 248, 248, 0.795); */
+  transition: left 0.3s;
+  /* padding: 0.9rem; */
+  z-index: 999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.title{
+  color: rgba(43, 248, 248, 0.61);
+  font-size: 1.2rem;
+  font-weight:600 ;
+  margin-left: 1.8rem;
+  /* border-bottom: 1px solid aqua; */
+}
+
+ hr{
+  margin-left: 30px;
+  color: aqua;
+  width: 80%;
+  }
+
+.close{
+  
+  position: absolute;
+  left: 90%;
+  font-size: 1.6rem;
+  top: 2.5%;
+  /* padding: 3px; */
+  margin: 0;
+  color: rgba(43, 248, 248, 0.61);
+  /* margin-right: 1rem; */
+cursor: pointer;
+}
+
+.h4tag{
+   color: rgba(43, 248, 248, 0.61);
+  font-size: 1.2rem;
+  font-weight:600 ;
+  padding: 1.2rem;
+  margin-left: 9px;
+  position: relative;
+  top: 3.7%;
+}
+
+.card-container{
+  color: rgba(69, 73, 73, 0.397);
+  padding: 2px;
+  border-radius: 7px;
+ width: fit-content;
+ 
+}
+
+.card1{
+  background-color: rgba(33, 34, 34, 0.76);
+  border-radius: 15px;
+  transition: 0.2S ease-in-out;
+  border: none;
+  margin-top: 15px;
+  transition: transform 0.3s;
+  padding: 4px;
+}
+
+.card1:hover {
+  transform: scale(1.05);
+}
+.card-container h5{
+  color: rgba(0, 255, 255, 0.61);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+
+}
+
+.img7{
+  height: 77px;
+  width: 200px;
+}
+
+.img8{
+  height: 77px;
+  width: 200px;
+}

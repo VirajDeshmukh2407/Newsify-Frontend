@@ -1,0 +1,48 @@
+
+ body{
+    background-color: rgba(0, 0, 0, 0.904);
+    padding: 5px;
+} 
+
+.img{
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+}
+
+.card{
+    margin-top: 2.9rem;
+    background-color: #141313;
+    border: 1px solid rgba(43, 248, 248, 0.432);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(43, 248, 248, 0.616);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+        transform:scale(1.02); 
+      }
+
+
+
+.text-content{
+    color: white;
+ }
+ 
+
+.bookmark{
+    padding: 13px;
+    color:  rgba(9, 238, 238, 0.918);
+    text-align: center;
+    position: fixed;
+    margin-right: 7px;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.1s ease-in-out;
+    :hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+
