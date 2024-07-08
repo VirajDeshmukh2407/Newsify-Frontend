@@ -19,17 +19,7 @@ const Content = () => {
       once: false,
       mirror: true,
     });
-    // `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`,
-    // {
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*",
-    //   },
-    // }
-    // "https://gnews.io/api/v4/top-headlines?country=in&token=d4425bc392b6fa2703547139844a8b3b"
-    // `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`,
-    // { headers: { "Access-Control-Allow-Origin": "*" } }
-    // "https://newsapi.org/v2/top-headlines?country=in&apiKey=19e370ed9a484826a1100e7436f463fe"
-    // "/.netlify/functions/index"
+
     const fetchNews = async () => {
       try {
         const response = await axios.get(
