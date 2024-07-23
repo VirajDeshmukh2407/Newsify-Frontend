@@ -5,7 +5,7 @@ import "./content.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import defaultImg from "../images/india_img.png";
+import defaultImg from "../images/default-image.webp";
 
 const Content = ({ category }) => {
   const [news, setNews] = useState([]);
