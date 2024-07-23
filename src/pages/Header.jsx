@@ -14,22 +14,21 @@
 // import Img4 from "../images/education.png";
 // import Img5 from "../images/health.png";
 // import Img6 from "../images/bus.png";
-// import Img7 from "../images/international.png";
-// import Img8 from "../images/movies.png";
-// import Img9 from "../images/startups.png";
+// // import Img7 from "../images/international.png";
+// // import Img8 from "../images/movies.png";
+// // import Img9 from "../images/startups.png";
 // import Img10 from "../images/technology.png";
 // import { Link } from "react-router-dom";
-// // import axios from "axios";
 
-// const Header = () => {
+// const Header = ({ onCategoryClick }) => {
 //   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-//   const [news, setNews] = useState([]);
 
 //   const toggleSidebar = () => {
 //     setIsSidebarOpen(!isSidebarOpen);
 //   };
 
 //   const handleCategoryClick = (category) => {
+//     onCategoryClick(category);
 //     toggleSidebar();
 //   };
 
@@ -40,16 +39,10 @@
 //           <button className="iconbtn" onClick={toggleSidebar}>
 //             <FontAwesomeIcon icon={faBars} className="icons" />
 //           </button>
-//           <h3
-//             className="color1 text-center flex-grow-1 "
-//             // onClick={refreshPage}
-//           >
-//             Newsify
-//           </h3>
+//           <h3 className="color1 text-center flex-grow-1 ">Newsify</h3>
 //         </div>
 //       </nav>
 
-//       {/* sidebar component starts... */}
 //       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
 //         <div>
 //           <div className="s-header d-flex">
@@ -99,7 +92,7 @@
 //                   onClick={() => handleCategoryClick("general")}
 //                 >
 //                   <img src={Img1} alt="" className="img1 img-fluid " />
-//                   <h5>India</h5>
+//                   <h5>General</h5>
 //                 </button>
 //               </div>
 //               <div className="col-6">
@@ -114,19 +107,19 @@
 //               <div className="col-6">
 //                 <button
 //                   className="card1"
-//                   onClick={() => handleCategoryClick("politics")}
+//                   onClick={() => handleCategoryClick("entertainment")}
 //                 >
 //                   <img src={Img3} alt="" className=" img-fluid " />
-//                   <h5>Politics</h5>
+//                   <h5>Entertainment</h5>
 //                 </button>
 //               </div>
 //               <div className="col-6">
 //                 <button
 //                   className="card1"
-//                   onClick={() => handleCategoryClick("education")}
+//                   onClick={() => handleCategoryClick("science")}
 //                 >
 //                   <img src={Img4} alt="" className=" img-fluid " />
-//                   <h5>Education</h5>
+//                   <h5>Science</h5>
 //                 </button>
 //               </div>
 //               <div className="col-6">
@@ -151,67 +144,28 @@
 //                   <h5>Business</h5>
 //                 </button>
 //               </div>
+
 //               <div className="col-6">
-//                 <button
-//                   className="card1"
-//                   onClick={() => handleCategoryClick("international")}
-//                 >
-//                   <img src={Img7} alt="" className="img-fluid img7" />
-//                   <h5>International</h5>
-//                 </button>
-//               </div>
-//               <div className="col-6">
-//                 <button
-//                   className="card1"
-//                   onClick={() => handleCategoryClick("entertainment")}
-//                 >
-//                   <img src={Img8} alt="" className=" img-fluid img8" />
-//                   <h5>Movies</h5>
-//                 </button>
-//               </div>
-//               <div className="col-6">
-//                 <button
-//                   className="card1"
-//                   onClick={() => handleCategoryClick("startup")}
-//                 >
-//                   <img src={Img9} alt="" className=" img-fluid img8" />
-//                   <h5>Startups</h5>
-//                 </button>
-//               </div>
-//               <div className="col-6">
-//                 <button
-//                   className="card1"
-//                   onClick={() => handleCategoryClick("technology")}
-//                 >
-//                   <img src={Img10} alt="" className=" img-fluid img8" />
-//                   <h5>Technology</h5>
-//                 </button>
+//                 <Link to="/technology">
+//                   <button
+//                     className="card1"
+//                     onClick={() => handleCategoryClick("technology")}
+//                   >
+//                     <img src={Img10} alt="" className=" img-fluid img7" />
+//                     <h5>Technology</h5>
+//                   </button>
+//                 </Link>
 //               </div>
 //             </div>
 //           </div>
 //         </div>
-//       </div>
-
-//       {isSidebarOpen && (
-//         <div className="backdrop" onClick={toggleSidebar}></div>
-//       )}
-
-//       <div className="news-container">
-//         {news.map((article, index) => (
-//           <div key={index} className="news-article">
-//             <h2>{article.title}</h2>
-//             <p>{article.description}</p>
-//             <a href={article.url} target="_blank" rel="noopener noreferrer">
-//               Read more
-//             </a>
-//           </div>
-//         ))}
 //       </div>
 //     </div>
 //   );
 // };
 
 // export default Header;
+
 import React, { useState } from "react";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -228,14 +182,12 @@ import Img3 from "../images/politics.png";
 import Img4 from "../images/education.png";
 import Img5 from "../images/health.png";
 import Img6 from "../images/bus.png";
-import Img7 from "../images/international.png";
-import Img8 from "../images/movies.png";
-import Img9 from "../images/startups.png";
 import Img10 from "../images/technology.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({ onCategoryClick }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -243,6 +195,7 @@ const Header = ({ onCategoryClick }) => {
 
   const handleCategoryClick = (category) => {
     onCategoryClick(category);
+    navigate(`/${category}`);
     toggleSidebar();
   };
 
@@ -306,7 +259,7 @@ const Header = ({ onCategoryClick }) => {
                   onClick={() => handleCategoryClick("general")}
                 >
                   <img src={Img1} alt="" className="img1 img-fluid " />
-                  <h5>India</h5>
+                  <h5>General</h5>
                 </button>
               </div>
               <div className="col-6">
@@ -321,19 +274,19 @@ const Header = ({ onCategoryClick }) => {
               <div className="col-6">
                 <button
                   className="card1"
-                  onClick={() => handleCategoryClick("politics")}
+                  onClick={() => handleCategoryClick("entertainment")}
                 >
                   <img src={Img3} alt="" className=" img-fluid " />
-                  <h5>Politics</h5>
+                  <h5>Entertainment</h5>
                 </button>
               </div>
               <div className="col-6">
                 <button
                   className="card1"
-                  onClick={() => handleCategoryClick("education")}
+                  onClick={() => handleCategoryClick("science")}
                 >
                   <img src={Img4} alt="" className=" img-fluid " />
-                  <h5>Education</h5>
+                  <h5>Science</h5>
                 </button>
               </div>
               <div className="col-6">
@@ -358,33 +311,7 @@ const Header = ({ onCategoryClick }) => {
                   <h5>Business</h5>
                 </button>
               </div>
-              <div className="col-6">
-                <button
-                  className="card1"
-                  onClick={() => handleCategoryClick("world")}
-                >
-                  <img src={Img7} alt="" className=" img-fluid img7" />
-                  <h5>International</h5>
-                </button>
-              </div>
-              <div className="col-6">
-                <button
-                  className="card1"
-                  onClick={() => handleCategoryClick("entertainment")}
-                >
-                  <img src={Img8} alt="" className=" img-fluid img7" />
-                  <h5>Movies</h5>
-                </button>
-              </div>
-              <div className="col-6">
-                <button
-                  className="card1"
-                  onClick={() => handleCategoryClick("startup")}
-                >
-                  <img src={Img9} alt="" className=" img-fluid img7" />
-                  <h5>Startups</h5>
-                </button>
-              </div>
+
               <div className="col-6">
                 <button
                   className="card1"
