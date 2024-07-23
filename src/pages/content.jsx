@@ -5,6 +5,7 @@ import "./content.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import defaultImg from "../images/india_img.png";
 
 const Content = ({ category }) => {
   const [news, setNews] = useState([]);
@@ -86,7 +87,7 @@ const Content = ({ category }) => {
         >
           <div className="col-12 col-lg-6">
             <img
-              src={article.urlToImage || "default-image.jpg"}
+              src={article.urlToImage || defaultImg}
               alt={article.title}
               className="img img-fluid"
             />
