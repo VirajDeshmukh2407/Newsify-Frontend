@@ -5,7 +5,7 @@ import "../pages/content.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import defaultImg from "../images/default-img.webp";
+import defaultImg from "../images/default-img.png";
 
 const Technology = ({ category }) => {
   const [news, setNews] = useState([]);
