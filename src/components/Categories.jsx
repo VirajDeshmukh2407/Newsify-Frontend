@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import defaultImg from "../images/defaultImage.jpg";
 
-const Technology = ({ category }) => {
+const Categories = ({ category }) => {
   const [news, setNews] = useState([]);
   const [bookmarkedArticles, setBookmarkedArticles] = useState(() => {
     const savedBookmarks = localStorage.getItem("bookmarkedArticles");
@@ -129,4 +129,4 @@ const Technology = ({ category }) => {
   );
 };
 
-export default Technology;
+export default Categories;
