@@ -10,8 +10,8 @@ import Categories from "./components/Categories";
 function App() {
   const [category, setCategory] = useState("general");
 
-  const handleCategoryClick = (category) => {
-    setCategory(category);
+  const handleCategoryClick = (selectedCategory) => {
+    setCategory(selectedCategory);
   };
 
   return (
@@ -22,10 +22,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Content category={category} />} />
             <Route path="/bookmarks" element={<Bookmarks />} />
-            <Route
-              path="/:category"
+            {/* <Route
+              path="/category/:categoryName"
               element={<Categories category={category} />}
-            />
+            /> */}
+            <Route path="/category/:categoryName" element={<Categories />} />
           </Routes>
         </div>
       </div>

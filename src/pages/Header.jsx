@@ -27,7 +27,8 @@ const Header = ({ onCategoryClick }) => {
 
   const handleCategoryClick = (category) => {
     onCategoryClick(category);
-    navigate(`/${category}`);
+    // navigate(`/${category}`);
+    navigate(`/category/${category}`);
     toggleSidebar();
   };
 
